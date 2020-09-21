@@ -9,13 +9,14 @@ interface neuViewProps {
   swapShadows: boolean;
   darkShadowColor: string;
   lightShadowColor: string;
-  onPress: () => void;
+  inner: boolean;
+  onPress?: () => void;
 }
 
 const NeuView = ({ children, styles, onPress, ...rest }: neuViewProps) => {
   const defaultStyle = {
     shadowOpacity: 1,
-    shadowRadius: 6,
+    shadowRadius: 10,
     shadowOffset: { width: 3, height: 3 },
   };
 
@@ -29,7 +30,7 @@ const NeuView = ({ children, styles, onPress, ...rest }: neuViewProps) => {
 };
 
 NeuView.defaultProps = {
-  swapShadows: true,
+  inner: false,
   darkShadowColor: '#fff',
   lightShadowColor: '#A5AABC',
 };
