@@ -6,10 +6,10 @@ import { TouchableContainer } from './styles';
 interface neuViewProps {
   children?: React.ReactNode;
   styles: React.CSSProperties;
-  swapShadows: boolean;
-  darkShadowColor: string;
-  lightShadowColor: string;
-  inner: boolean;
+  swapShadows?: boolean;
+  darkShadowColor?: string;
+  lightShadowColor?: string;
+  inner?: boolean;
   onPress?: () => void;
 }
 
