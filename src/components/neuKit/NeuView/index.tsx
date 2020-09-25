@@ -16,7 +16,7 @@ interface neuViewProps {
 const NeuView = ({ children, styles, onPress, ...rest }: neuViewProps) => {
   const defaultStyle = {
     shadowOpacity: 1,
-    shadowRadius: 10,
+    shadowRadius: 3,
     shadowOffset: { width: 3, height: 3 },
   };
 
@@ -32,7 +32,7 @@ const NeuView = ({ children, styles, onPress, ...rest }: neuViewProps) => {
 NeuView.defaultProps = {
   inner: false,
   darkShadowColor: '#fff',
-  lightShadowColor: '#A5AABC',
+  lightShadowColor: 'rgba(165,170,188, .6)',
 };
 
 export default NeuView;

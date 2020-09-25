@@ -10,6 +10,6 @@ export default {
     radius: 30,
   },
   screenContainer: {
-    padding: '40px 26px 34px',
+    padding: '40px 18px 34px',
   },
 };

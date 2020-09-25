@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Header from '@components/common/Header';
 import { useNavigation } from '@react-navigation/native';
 import { NeuScreenContainer, NeuSearch } from '@components/neuKit';
 

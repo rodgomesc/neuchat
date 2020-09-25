@@ -4,12 +4,12 @@ import { ReactTestRenderer } from 'react-test-renderer';
 import { NeuTextWrapper } from './styles';
 
 interface neuTextProps {
-  text: string;
-  style: React.CSSProperties;
+  children: React.ReactNode;
+  style?: React.CSSProperties;
 }
 
-const NeuText = ({ text, style }: neuTextProps) => {
-  return <NeuTextWrapper style={style}>{text}</NeuTextWrapper>;
+const NeuText = ({ children, style }: neuTextProps) => {
+  return <NeuTextWrapper style={style}>{children}</NeuTextWrapper>;
 };
 
 export default NeuText;
