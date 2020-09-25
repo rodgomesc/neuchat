@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import { useNavigation } from '@react-navigation/native';
 import { NeuScreenContainer, NeuSearch } from '@components/neuKit';
 
 import geraldAvatar from '@assets/images/avatar/gerald.png';
@@ -56,6 +57,7 @@ const chatData = [
 ];
 
 const Chat: React.FC = () => {
+  const navigation = useNavigation();
   return (
     <NeuScreenContainer>
       <Header />
@@ -64,7 +66,7 @@ const Chat: React.FC = () => {
         <MessageWrapper
           data={chatData}
           renderItem={({ item }: any) => (
-            <MessageItem>
+            <MessageItem onPress={() => navigation.navigate('ChatDetails')}>
               <AvatarWrapper>
                 <Avatar source={item.avatar} />
               </AvatarWrapper>
